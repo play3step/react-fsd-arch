@@ -1,8 +1,6 @@
 // eslint.config.js
 import js from '@eslint/js'
 import globals from 'globals'
-import reactHooks from 'eslint-plugin-react-hooks'
-import reactRefresh from 'eslint-plugin-react-refresh'
 import tseslint from 'typescript-eslint'
 import { globalIgnores } from 'eslint/config'
 
@@ -14,9 +12,7 @@ export default tseslint.config([
     files: ['**/*.{ts,tsx}'],
     extends: [
       js.configs.recommended, // 기본 JS 규칙
-      tseslint.configs.recommended, // TypeScript 규칙
-      reactHooks.configs['recommended-latest'], // 최신 React Hooks 규칙
-      reactRefresh.configs.vite // Vite용 React Refresh
+      tseslint.configs.recommended // TypeScript 규칙
     ],
     languageOptions: {
       ecmaVersion: 'latest',
@@ -25,10 +21,6 @@ export default tseslint.config([
         ...globals.es2021
       }
     },
-    rules: {
-      // React Hooks 추가 규칙 (옵션)
-      'react-hooks/exhaustive-deps': 'warn',
-      'react-hooks/rules-of-hooks': 'error'
-    }
+    rules: {}
   }
 ])
