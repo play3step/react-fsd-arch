@@ -40,7 +40,7 @@ export default {
           500: '#DC2626',
           600: '#7F1D1D'
         },
-        gray: {
+        neutral: {
           50: '#F6FAFB',
           100: '#F3F4F6',
           200: '#E5E7EB',
@@ -54,13 +54,13 @@ export default {
         }
       },
       spacing: {
-        xs: '4px',
-        sm: '8px',
-        md: '12px',
-        lg: '16px',
-        xl: '24px',
-        '2xl': '32px',
-        '3xl': '48px'
+        xs: '0.25rem', // 4px
+        sm: '0.5rem', // 8px
+        md: '0.75rem', // 12px
+        lg: '1rem', // 16px
+        xl: '1.5rem', // 24px
+        '2xl': '2rem', // 32px
+        '3xl': '3rem' // 48px
       },
       fontSize: {
         h1: ['2.25rem', { fontWeight: '700' }],
