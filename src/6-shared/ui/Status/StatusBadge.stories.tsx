@@ -3,13 +3,13 @@ import type { Meta, StoryObj } from '@storybook/react-vite'
 import { StatusBadge } from './StatusBadge'
 
 const meta = {
-  title: 'Example/StatusBadge',
+  title: 'Shared/StatusBadge',
   component: StatusBadge,
   tags: ['autodocs'],
   argTypes: {
     status: {
       control: 'select',
-      options: ['success', 'progress', 'error', 'review']
+      options: ['success', 'progress', 'error', 'wait', 'hold']
     }
   }
 } satisfies Meta<typeof StatusBadge>

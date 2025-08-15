@@ -2,86 +2,33 @@
 
 @theme {
   /* 폰트 */
-  --font-sans: 'Pretendard', 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+  --font-sans:
+    'Inter', 'Pretendard', 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
 
-  /* 색상 */
-  --color-primary-50: #eff6ff;
-  --color-primary-100: #dbeaff;
-  --color-primary-500: #3b82f6;
-  --color-primary-600: #2563eb;
-  --color-primary-900: #1e3a8a;
+  /* Primary */
+  --color-primary-50: #eef2ff;
+  --color-primary-100: #e0e7ff;
+  --color-primary-500: #6366f1;
+  --color-primary-600: #4f46e5;
+  --color-primary-700: #4338ca;
 
-  --color-success-50: #dff0d4;
-  --color-success-100: #d6fce7;
-  --color-success-500: #10b981;
-  --color-success-600: #059669;
-  --color-success-900: #064e3b;
-
-  --color-warning-50: #fff8eb;
-  --color-warning-100: #ffec37;
+  /* Secondary */
+  --color-success-500: #10e981;
   --color-warning-500: #f59e0b;
-  --color-warning-600: #d97706;
-  --color-warning-900: #92400e;
+  --color-error-500: #ef4444;
+  --color-info-500: #3b82f6;
 
-  --color-error-50: #ffe2f2;
-  --color-error-100: #fee2e2;
-  --color-error-400: #ff4444;
-  --color-error-500: #dc2626;
-  --color-error-600: #7f1d1d;
-
-  --color-neutral-50: #f6fafb;
+  /* Neutral */
+  --color-neutral-50: #f9fafb;
   --color-neutral-100: #f3f4f6;
   --color-neutral-200: #e5e7eb;
-  --color-neutral-300: #d1d5db;
   --color-neutral-400: #9ca3af;
   --color-neutral-500: #6b7280;
-  --color-neutral-600: #4b5563;
   --color-neutral-700: #374151;
-  --color-neutral-800: #1f2937;
   --color-neutral-900: #111827;
-
-  /* 간격 */
-  --spacing-xs: 0.25rem;
-  --spacing-sm: 0.5rem;
-  --spacing-md: 0.75rem;
-  --spacing-lg: 1rem;
-  --spacing-xl: 1.5rem;
-  --spacing-2xl: 2rem;
-  --spacing-3xl: 3rem;
-
-  /* 타이포(크기/가중치 토큰) */
-  --text-h1: 2.25rem;
-  --font-weight-h1: 700;
-
-  --text-h2: 1.875rem;
-  --font-weight-h2: 600;
-
-  --text-h3: 1.5rem;
-  --font-weight-h3: 600;
-
-  --text-h4: 1.25rem;
-  --font-weight-h4: 500;
-
-  --text-h5: 1rem;
-  --font-weight-h5: 500;
-
-  --text-h6: 0.875rem;
-  --font-weight-h6: 500;
-
-  --text-bodyLg: 1.125rem;
-  --font-weight-bodyLg: 400;
-
-  --text-body: 1rem;
-  --font-weight-body: 400;
-
-  --text-bodySm: 0.875rem;
-  --font-weight-bodySm: 400;
-
-  --text-caption: 0.75rem;
-  --font-weight-caption: 400;
 }
 
-/* 선택: 전역 기본 폰트 */
+/* 전역 기본 설정 */
 * {
   box-sizing: border-box;
   font-family: var(--font-sans);

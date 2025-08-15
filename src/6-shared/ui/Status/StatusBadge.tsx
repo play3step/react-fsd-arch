@@ -1,9 +1,11 @@
 import successIcon from '../../assets/badge/success.svg'
 import progressIcon from '../../assets/badge/progress.svg'
-import errorIcon from '../../assets/badge/error.svg'
-import reviewIcon from '../../assets/badge/review.svg'
+import errorIcon from '../../assets/badge/failed.svg'
+import waitIcon from '../../assets/badge/wait.svg'
+import holdIcon from '../../assets/badge/hold.svg'
+import { cn } from '../../utils/cn'
 
-type StatusType = 'success' | 'progress' | 'error' | 'review'
+type StatusType = 'success' | 'progress' | 'error' | 'wait' | 'hold'
 
 interface StatusBadgeProps {
   status: StatusType
@@ -12,26 +14,33 @@ interface StatusBadgeProps {
 const statusIcons = {
   success: {
     icon: successIcon,
-    color: 'bg-success-100 text-success-500'
+    color: 'bg-[#ECFDF5] text-[#059669]'
   },
   progress: {
     icon: progressIcon,
-    color: 'bg-warning-100 text-warning-600'
+    color: 'bg-[#FEF3C7] text-[#D97706]'
   },
   error: {
     icon: errorIcon,
-    color: 'bg-error-100 text-error-500'
+    color: 'bg-[#FEE2E2] text-[#DC2626]'
   },
-  review: {
-    icon: reviewIcon,
-    color: 'bg-primary-100 text-primary-500'
+  wait: {
+    icon: waitIcon,
+    color: 'bg-[#EEF2FF] text-[#6366F1]'
+  },
+  hold: {
+    icon: holdIcon,
+    color: 'bg-[#F3F4F6] text-[#6B7280]'
   }
 }
 
 export const StatusBadge = ({ status }: StatusBadgeProps) => {
   return (
     <div
-      className={`inline-flex items-center gap-xs px-sm py-xs rounded-lg ${statusIcons[status].color}`}>
+      className={cn(
+        'inline-flex items-center gap-1 px-2 py-1 rounded-lg',
+        statusIcons[status].color
+      )}>
       <img
         src={statusIcons[status].icon}
         alt={status}
